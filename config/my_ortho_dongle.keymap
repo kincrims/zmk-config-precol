@@ -7,18 +7,23 @@
 
         default_layer {
             bindings = <
-                // Ряд 1 (Верхний)
-                &kp ESC   &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
-                // Ряд 2
-                &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T     &kp Y     &kp U     &kp I     &kp O     &kp P     &kp DEL
-                // Ряд 3
-                &kp CLCK  &kp A     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
-                // Ряд 4
-                &kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RET
-                // Ряд 5
-                &kp LCTRL &kp LGUI  &kp LALT  &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RALT  &kp RGUI  &kp RCTRL
-                // Ряд 6 (Нижний)
+                // Ряд 1 (Самый верхний — Ф-ки)
                 &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
+
+                // Ряд 2 (Цифры + буква Ё)
+                &kp GRAVE &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
+
+                // Ряд 3 (ЙЦУКЕН + буква Х)
+                &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T     &kp Y     &kp U     &kp I     &kp O     &kp P     &kp LBKT
+
+                // Ряд 4 (ФЫВАПРО + буквы Ж, Э)
+                &kp ESC   &kp A     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
+
+                // Ряд 5 (ЯЧСМИТЬ + буквы Б, Ю, Ъ)
+                &kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp RBKT  &kp RET
+
+                // Ряд 6 (Самый нижний — Модификаторы и пробелы)
+                &kp LCTRL &kp LGUI  &kp LALT  &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RALT  &kp RGUI  &kp RCTRL
             >;
         };
     };
