@@ -2,17 +2,9 @@
 
 / {
     chosen {
-        // Указываем ZMK Studio, какую структуру использовать по умолчанию
         zmk,physical-layout = &default_layout;
     };
 
-    default_layout: default_layout {
-        compatible = "zmk,physical-layout";
-        display-name = "Default Layout";
-        transform = <&default_transform>;
-    };
-
-    // Описываем сетку 6х12 для ZMK Studio
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <12>;
@@ -26,4 +18,105 @@
             RC(5,0) RC(5,1) RC(5,2) RC(5,3) RC(5,4) RC(5,5) RC(5,6) RC(5,7) RC(5,8) RC(5,9) RC(5,10) RC(5,11)
         >;
     };
+
+    default_layout: default_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        transform = <&default_transform>;
+        
+        // Массив ссылок на виртуальные позиции клавиш, который требовал компилятор
+        keys = <
+            &k00 &k01 &k02 &k03 &k04 &k05 &k06 &k07 &k08 &k09 &k0a &k0b
+            &k10 &k11 &k12 &k13 &k14 &k15 &k16 &k17 &k18 &k19 &k1a &k1b
+            &k20 &k21 &k22 &k23 &k24 &k25 &k26 &k27 &k28 &k29 &k2a &k2b
+            &k30 &k31 &k32 &k33 &k34 &k35 &k36 &k37 &k38 &k39 &k3a &k3b
+            &k40 &k41 &k42 &k43 &k44 &k45 &k46 &k47 &k48 &k49 &k4a &k4b
+            &k50 &k51 &k52 &k53 &k54 &k55 &k56 &k57 &k58 &k59 &k5a &k5b
+        >;
+    };
+
+    // Описываем координаты каждой клавиши на сетке (шаг 100 = 1U клавиша)
+    // Ряд 0 (Ф-ки)
+    k00: k00 { compatible = "zmk,physical-layout-key"; x-pos = <0>;    y-pos = <0>; width = <100>; height = <100>; };
+    k01: k01 { compatible = "zmk,physical-layout-key"; x-pos = <100>;  y-pos = <0>; width = <100>; height = <100>; };
+    k02: k02 { compatible = "zmk,physical-layout-key"; x-pos = <200>;  y-pos = <0>; width = <100>; height = <100>; };
+    k03: k03 { compatible = "zmk,physical-layout-key"; x-pos = <300>;  y-pos = <0>; width = <100>; height = <100>; };
+    k04: k04 { compatible = "zmk,physical-layout-key"; x-pos = <400>;  y-pos = <0>; width = <100>; height = <100>; };
+    k05: k05 { compatible = "zmk,physical-layout-key"; x-pos = <500>;  y-pos = <0>; width = <100>; height = <100>; };
+    k06: k06 { compatible = "zmk,physical-layout-key"; x-pos = <600>;  y-pos = <0>; width = <100>; height = <100>; };
+    k07: k07 { compatible = "zmk,physical-layout-key"; x-pos = <700>;  y-pos = <0>; width = <100>; height = <100>; };
+    k08: k08 { compatible = "zmk,physical-layout-key"; x-pos = <800>;  y-pos = <0>; width = <100>; height = <100>; };
+    k09: k09 { compatible = "zmk,physical-layout-key"; x-pos = <900>;  y-pos = <0>; width = <100>; height = <100>; };
+    k0a: k0a { compatible = "zmk,physical-layout-key"; x-pos = <1000>; y-pos = <0>; width = <100>; height = <100>; };
+    k0b: k0b { compatible = "zmk,physical-layout-key"; x-pos = <1100>; y-pos = <0>; width = <100>; height = <100>; };
+
+    // Ряд 1 (Цифры)
+    k10: k10 { compatible = "zmk,physical-layout-key"; x-pos = <0>;    y-pos = <100>; width = <100>; height = <100>; };
+    k11: k11 { compatible = "zmk,physical-layout-key"; x-pos = <100>;  y-pos = <100>; width = <100>; height = <100>; };
+    k12: k12 { compatible = "zmk,physical-layout-key"; x-pos = <200>;  y-pos = <100>; width = <100>; height = <100>; };
+    k13: k13 { compatible = "zmk,physical-layout-key"; x-pos = <300>;  y-pos = <100>; width = <100>; height = <100>; };
+    k14: k14 { compatible = "zmk,physical-layout-key"; x-pos = <400>;  y-pos = <100>; width = <100>; height = <100>; };
+    k15: k15 { compatible = "zmk,physical-layout-key"; x-pos = <500>;  y-pos = <100>; width = <100>; height = <100>; };
+    k16: k16 { compatible = "zmk,physical-layout-key"; x-pos = <600>;  y-pos = <100>; width = <100>; height = <100>; };
+    k17: k17 { compatible = "zmk,physical-layout-key"; x-pos = <700>;  y-pos = <100>; width = <100>; height = <100>; };
+    k18: k18 { compatible = "zmk,physical-layout-key"; x-pos = <800>;  y-pos = <100>; width = <100>; height = <100>; };
+    k19: k19 { compatible = "zmk,physical-layout-key"; x-pos = <900>;  y-pos = <100>; width = <100>; height = <100>; };
+    k1a: k1a { compatible = "zmk,physical-layout-key"; x-pos = <1000>; y-pos = <100>; width = <100>; height = <100>; };
+    k1b: k1b { compatible = "zmk,physical-layout-key"; x-pos = <1100>; y-pos = <100>; width = <100>; height = <100>; };
+
+    // Ряд 2
+    k20: k20 { compatible = "zmk,physical-layout-key"; x-pos = <0>;    y-pos = <200>; width = <100>; height = <100>; };
+    k21: k21 { compatible = "zmk,physical-layout-key"; x-pos = <100>;  y-pos = <200>; width = <100>; height = <100>; };
+    k22: k22 { compatible = "zmk,physical-layout-key"; x-pos = <200>;  y-pos = <200>; width = <100>; height = <100>; };
+    k23: k23 { compatible = "zmk,physical-layout-key"; x-pos = <300>;  y-pos = <200>; width = <100>; height = <100>; };
+    k24: k24 { compatible = "zmk,physical-layout-key"; x-pos = <400>;  y-pos = <200>; width = <100>; height = <100>; };
+    k25: k25 { compatible = "zmk,physical-layout-key"; x-pos = <500>;  y-pos = <200>; width = <100>; height = <100>; };
+    k26: k26 { compatible = "zmk,physical-layout-key"; x-pos = <600>;  y-pos = <200>; width = <100>; height = <100>; };
+    k27: k27 { compatible = "zmk,physical-layout-key"; x-pos = <700>;  y-pos = <200>; width = <100>; height = <100>; };
+    k28: k28 { compatible = "zmk,physical-layout-key"; x-pos = <800>;  y-pos = <200>; width = <100>; height = <100>; };
+    k29: k29 { compatible = "zmk,physical-layout-key"; x-pos = <900>;  y-pos = <200>; width = <100>; height = <100>; };
+    k2a: k2a { compatible = "zmk,physical-layout-key"; x-pos = <1000>; y-pos = <200>; width = <100>; height = <100>; };
+    k2b: k2b { compatible = "zmk,physical-layout-key"; x-pos = <1100>; y-pos = <200>; width = <100>; height = <100>; };
+
+    // Ряд 3
+    k30: k30 { compatible = "zmk,physical-layout-key"; x-pos = <0>;    y-pos = <300>; width = <100>; height = <100>; };
+    k31: k31 { compatible = "zmk,physical-layout-key"; x-pos = <100>;  y-pos = <300>; width = <100>; height = <100>; };
+    k32: k32 { compatible = "zmk,physical-layout-key"; x-pos = <200>;  y-pos = <300>; width = <100>; height = <100>; };
+    k33: k33 { compatible = "zmk,physical-layout-key"; x-pos = <300>;  y-pos = <300>; width = <100>; height = <100>; };
+    k34: k34 { compatible = "zmk,physical-layout-key"; x-pos = <400>;  y-pos = <300>; width = <100>; height = <100>; };
+    k35: k35 { compatible = "zmk,physical-layout-key"; x-pos = <500>;  y-pos = <300>; width = <100>; height = <100>; };
+    k36: k36 { compatible = "zmk,physical-layout-key"; x-pos = <600>;  y-pos = <300>; width = <100>; height = <100>; };
+    k37: k37 { compatible = "zmk,physical-layout-key"; x-pos = <700>;  y-pos = <300>; width = <100>; height = <100>; };
+    k38: k38 { compatible = "zmk,physical-layout-key"; x-pos = <800>;  y-pos = <300>; width = <100>; height = <100>; };
+    k39: k39 { compatible = "zmk,physical-layout-key"; x-pos = <900>;  y-pos = <300>; width = <100>; height = <100>; };
+    k3a: k3a { compatible = "zmk,physical-layout-key"; x-pos = <1000>; y-pos = <300>; width = <100>; height = <100>; };
+    k3b: k3b { compatible = "zmk,physical-layout-key"; x-pos = <1100>; y-pos = <300>; width = <100>; height = <100>; };
+
+    // Ряд 4
+    k40: k40 { compatible = "zmk,physical-layout-key"; x-pos = <0>;    y-pos = <400>; width = <100>; height = <100>; };
+    k41: k41 { compatible = "zmk,physical-layout-key"; x-pos = <100>;  y-pos = <400>; width = <100>; height = <100>; };
+    k42: k42 { compatible = "zmk,physical-layout-key"; x-pos = <200>;  y-pos = <400>; width = <100>; height = <100>; };
+    k43: k43 { compatible = "zmk,physical-layout-key"; x-pos = <300>;  y-pos = <400>; width = <100>; height = <100>; };
+    k44: k44 { compatible = "zmk,physical-layout-key"; x-pos = <400>;  y-pos = <400>; width = <100>; height = <100>; };
+    k45: k45 { compatible = "zmk,physical-layout-key"; x-pos = <500>;  y-pos = <400>; width = <100>; height = <100>; };
+    k46: k46 { compatible = "zmk,physical-layout-key"; x-pos = <600>;  y-pos = <400>; width = <100>; height = <100>; };
+    k47: k47 { compatible = "zmk,physical-layout-key"; x-pos = <700>;  y-pos = <400>; width = <100>; height = <100>; };
+    k48: k48 { compatible = "zmk,physical-layout-key"; x-pos = <800>;  y-pos = <400>; width = <100>; height = <100>; };
+    k49: k49 { compatible = "zmk,physical-layout-key"; x-pos = <900>;  y-pos = <400>; width = <100>; height = <100>; };
+    k4a: k4a { compatible = "zmk,physical-layout-key"; x-pos = <1000>; y-pos = <400>; width = <100>; height = <100>; };
+    k4b: k4b { compatible = "zmk,physical-layout-key"; x-pos = <1100>; y-pos = <400>; width = <100>; height = <100>; };
+
+    // Ряд 5 (Модификаторы)
+    k50: k50 { compatible = "zmk,physical-layout-key"; x-pos = <0>;    y-pos = <500>; width = <100>; height = <100>; };
+    k51: k51 { compatible = "zmk,physical-layout-key"; x-pos = <100>;  y-pos = <500>; width = <100>; height = <100>; };
+    k52: k52 { compatible = "zmk,physical-layout-key"; x-pos = <200>;  y-pos = <500>; width = <100>; height = <100>; };
+    k53: k53 { compatible = "zmk,physical-layout-key"; x-pos = <300>;  y-pos = <500>; width = <100>; height = <100>; };
+    k54: k54 { compatible = "zmk,physical-layout-key"; x-pos = <400>;  y-pos = <500>; width = <100>; height = <100>; };
+    k55: k55 { compatible = "zmk,physical-layout-key"; x-pos = <500>;  y-pos = <500>; width = <100>; height = <100>; };
+    k56: k56 { compatible = "zmk,physical-layout-key"; x-pos = <600>;  y-pos = <500>; width = <100>; height = <100>; };
+    k57: k57 { compatible = "zmk,physical-layout-key"; x-pos = <700>;  y-pos = <500>; width = <100>; height = <100>; };
+    k58: k58 { compatible = "zmk,physical-layout-key"; x-pos = <800>;  y-pos = <500>; width = <100>; height = <100>; };
+    k59: k59 { compatible = "zmk,physical-layout-key"; x-pos = <900>;  y-pos = <500>; width = <100>; height = <100>; };
+    k5a: k5a { compatible = "zmk,physical-layout-key"; x-pos = <1000>; y-pos = <500>; width = <100>; height = <100>; };
+    k5b: k5b { compatible = "zmk,physical-layout-key"; x-pos = <1100>; y-pos = <500>; width = <100>; height = <100>; };
 };
