@@ -23,8 +23,8 @@
                 &kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp RBKT  &kp RET
 
                 // Ряд 6 (Самый нижний — Модификаторы и пробелы)
-                &kp LCTRL &kp LGUI  &kp LALT  &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RALT  &kp RGUI  &kp RCTRL
+                &kp LCTRL &kp LGUI  &kp LALT  &none    &kp SPACE &none    &none    &kp SPACE &none    &kp RALT  &kp RGUI  &kp RCTRL
             >;
         };
     };
-};
+};  
