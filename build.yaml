@@ -21,7 +21,4 @@
 ---
 include:
   - board: nrfmicro_11
-    shield: my_ortho_peripheral
-  # Добавляем вот эту строчку для работы по проводу и напрямую по BT:
-  - board: nrfmicro_11
     shield: my_ortho
