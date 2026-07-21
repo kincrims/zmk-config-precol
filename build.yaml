@@ -1,7 +1,8 @@
 include:
-  - board: nrfmicro_11
+  - board: nrfmicro_1.1
     shield: my_ortho
     snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
 
-  - board: nrfmicro_11
+  - board: nrfmicro_1.1
     shield: settings_reset
