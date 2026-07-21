@@ -1,1 +1,2 @@
-shield: my_ortho
+config SHIELD_MY_ORTHO
+    def_bool $(shields_list_contains,my_ortho)

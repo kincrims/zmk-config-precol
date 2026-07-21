@@ -22,3 +22,4 @@
 include:
   - board: nrfmicro_11
     shield: my_ortho
+    snippet: studio-rpc-usb-uart      
