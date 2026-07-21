@@ -1,8 +1,8 @@
 include:
-  - board: nrfmicro_1.1
+  - board: nice_nano_v2
     shield: my_ortho
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
 
-  - board: nrfmicro_1.1
+  - board: nice_nano_v2
     shield: settings_reset
