@@ -1,8 +1,1 @@
-config SHIELD_MY_ORTHO
-    def_bool $(shields_list_contains,my_ortho)
-
-config SHIELD_MY_ORTHO_DONGLE
-    def_bool $(shields_list_contains,my_ortho_dongle)
-
-config SHIELD_MY_ORTHO_PERIPHERAL
-    def_bool $(shields_list_contains,my_ortho_peripheral)
+shield: my_ortho
